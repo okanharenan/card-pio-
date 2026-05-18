@@ -240,7 +240,17 @@ function adicionarEventosCarrinho() {
             removerProduto(nomeProduto);
             
         };
+
     });
+    document.getElementById("voltarParaCardapio")
+    .addEventListener("click", () => {
+
+       modalDecisao.hide()
+
+       offcanvasCarrinho.hide()
+
+})
+
 
     document.getElementById("finalizarCompra").addEventListener("click", finalizarCompra)
 

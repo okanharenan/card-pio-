@@ -302,6 +302,7 @@ button:hover {
 
 .box-limpar{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -324,6 +325,12 @@ button:hover {
     width: 300px;
     padding: 10px;
     font-size: 15px;
+    font-weight: bold;
+}
+
+.voltarParaCardapio{
+    width: 300px;
+    font-size:15px;
     font-weight: bold;
 }
 
