@@ -218,7 +218,7 @@ button:hover {
 
 .offcanvas{
     display: flex;
-    flex-direction: ;
+    flex-direction:column ;
     width: 700px !important;
     background: #07111f;
     color: white;
