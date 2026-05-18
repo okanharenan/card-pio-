@@ -94,12 +94,10 @@ btnCarrinho.addEventListener("click", () => {
         alert("O carrinho está vazio! Adicione produtos para visualizar o carrinho.")
     }
 })
+
+
 btnContinuar.addEventListener("click", () =>{
-    if(carrinho.length > 0){
-        modalDecisao.hide()
-    }else{
-        alert("O carrinho está vazio! Adicione produtos para continuar comprando.")
-    }
+    modalDecisao.hide()
     
 })
 
@@ -146,8 +144,8 @@ function adicionarProdutoAoCarrinho(produto){
 }
 
 //função para mostrar detalhes do produto adicionado ao carrinho
-function mostrarDetalhesProdutoAdicionado(){
-
+function mostrarDetalhesProdutoAdicionado(abriModal = false){
+    
     let lista = ""
     let totalCarrinho = 0
 
@@ -196,10 +194,8 @@ lista += `
 
        
 
-    if(carrinho.length > 0){
+    if(abriModal){
         modalDecisao.show()
-    }else{
-        alert("O carrinho está vazio! Adicione produtos para visualizar o carrinho.")
     }
     
     
@@ -278,6 +274,10 @@ function diminuirQuantidade(nomeProduto){
     let item = carrinho.find(item => item.nome === nomeProduto)
     if (item && item.quantidade > 1){
         item.quantidade -- 
+    }else{
+        removerProduto(nomeProduto)
+        return
+
     }
     mostrarDetalhesProdutoAdicionado()
 }
